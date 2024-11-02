@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* styles/globals.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1d2123;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.text-neutral-font {
+  font-size: 11px;
+  padding: 10px 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #969ca2;
+}
+
+.project-card {
+  background: transparent;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 100%;
+  width: 99%;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+  border: 1px solid;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  color: #b0cee2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.project-card button {
+  background: none;
+  border: none;
+  color: #ddedf7;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-section {
+  background-color: #1e2328;
+  color: #dde4ff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.project-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* General reset and basic styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply root styles */
+:root {
+  --color-neutral-950: #1a1a1a;
+  /* Neutral color */
+  --color-neutral-800: #333333;
+  /* Neutral color for border */
+  --color-neutral-700: #4d4d4d;
+  /* Neutral color for placeholder */
+  --color-neutral-600: #666666;
+  /* Gradient end */
+  --color-neutral-500: #7f7f7f;
+  /* Text color */
+  --color-neutral-200: #d9d9d9;
+  /* Gradient start */
+  --color-teal-500: #38b2ac;
+  /* Focus ring color */
+}
+
+/* Container styles */
+.background-beams-demo {
+  height: auto;
+  width: 100%;
+  background-color: var(--color-neutral-950);
+  border-radius: 0.5rem;
+  position: relative;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.real-top {
+  top: 0 !important;
+  position: absolute !important;
+  width: 100% !important;
+}
+
+/* Inner content container */
+.background-beams-demo .content {
+  width: 100%;
+  /* 2xl */
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  z-index: 100;
+  position: relative;
+  /* position: absolute; */
+}
+
+.techTechStack {
+  color: #9faab1 !important;
+  padding: 5px !important;
+  font-size: 14px !important;
+}
+
+/* Heading styles */
+.background-beams-demo h1 {
+  position: relative;
+  z-index: 10;
+  font-size: 2.5rem;
+  /* lg on small, 7xl on medium */
+  font-weight: bold;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom, var(--color-neutral-200), var(--color-neutral-600));
+  text-transform: uppercase;
+}
+
+/* Paragraph styles */
+.background-beams-demo p {
+  color: var(--color-neutral-500);
+  margin: 0.5rem;
+  font-size: 0.875rem;
+  /* sm */
+  line-height: 1.5;
+  /* position: relative; */
+  z-index: 10;
+}
+
+.background-beams-demo p.details {
+  color: #b4b4b4;
+  margin: 0.5rem;
+  font-size: 0.875rem;
+  padding-left: 6px;
+  line-height: 1.5;
+  position: relative;
+  z-index: 10;
+}
+
+/* Input field */
+.background-beams-demo input[type="text"] {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-neutral-800);
+  background-color: transparent;
+  color: #ffffff;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.background-beams-demo input[type="text"]::placeholder {
+  color: var(--color-neutral-700);
+}
+
+/* Focus ring for input */
+.background-beams-demo input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-teal-500);
+}
