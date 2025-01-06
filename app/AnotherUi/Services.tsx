@@ -12,8 +12,7 @@ type ServiceCardProps = {
   images?: string;
 };
 
-const ServiceCard = ({ icon: Icon, title, description, link, images }: { icon: React.ComponentType<any>; title: string; description: string; link?: string, images?: string }) => {
-  // Determine the star fill logic based on the title
+const ServiceCard = ({ icon: Icon, title, description, link, images }: ServiceCardProps) => { 
   let filledStars = 0;
   if (title === "Full Stack Developer") {
     filledStars = 4.5;
