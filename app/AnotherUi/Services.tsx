@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from 'next/image';
 import { Code2, BookOpen, Briefcase } from "lucide-react";
 
 const ServiceCard = ({ icon: Icon, title, description, link, images }: { icon: any; title: string; description: string; link?: string, images?: String }) => {
@@ -39,16 +38,11 @@ const ServiceCard = ({ icon: Icon, title, description, link, images }: { icon: a
       <div className="icon-container">
         {!images ?
           <Icon className="icon" /> :
-          <Image
+          <img
             src={`/Images/${images}`} // Ensure favicon.ico is in the public folder
             alt='Project Image'
-            width={50}
-            height={50}
             style={{ width: '100%', borderRadius: '8px' }}
-            layout='intrinsic'
-            priority={false}
           />
-          // <img src={`/Images/${images}`}/>
         }
       </div>
       <div>
