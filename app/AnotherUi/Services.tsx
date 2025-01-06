@@ -2,10 +2,9 @@
 import React from "react";
 import { Code2, BookOpen, Briefcase } from "lucide-react";
 
-const ServiceCard = ({ icon: Icon, title, description, link, images }: { icon: any; title: string; description: string; link?: string, images?: String }) => {
+const ServiceCard = ({ icon: Icon, title, description, link, images }: { icon: React.ComponentType<any>; title: string; description: string; link?: string, images?: String }) => {
   // Determine the star fill logic based on the title
   const getStarStyles = (index: number) => {
-    let stars = 5; // Total stars
     let filledStars = 0;
 
     if (title === "Full Stack Developer") {
