@@ -26,7 +26,7 @@ export default function MainFooter() {
             Welcome to My Development Journey!
           </Typography>
           <Typography variant="h5" sx={{ textAlign: "center", color: "text.secondary" }}>
-            I'm a MERN Stack Developer and Python DSA Enthusiast. Join me as I build scalable solutions and solve complex problems.
+            I am a MERN Stack Developer and Python DSA Enthusiast. Join me as I build scalable solutions and solve complex problems.
           </Typography>
         </Box>
         <Box sx={{ width: "100%", my: 4, py: 4, bgcolor: "background.paper" }}>
@@ -34,7 +34,7 @@ export default function MainFooter() {
             <Grid item xs={12} sm={4}>
               <Typography variant="h6" sx={{ color: "text.primary" }}>About Me</Typography>
               <Typography variant="body2" sx={{ mt: 1, color: "text.secondary" }}>
-                Hi, I'm a passionate developer proficient in MERN stack and DSA using Python. 
+                Hi, I am a passionate developer proficient in MERN stack and DSA using Python. 
                 I specialize in creating dynamic and scalable web applications while solving complex algorithmic problems.
               </Typography>
               <Box sx={{ mt: 1, display: "flex", gap: 1 }}>
