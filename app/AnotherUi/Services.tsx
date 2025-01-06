@@ -1,34 +1,35 @@
 "use client";
 import React from "react";
 import { Code2, BookOpen, Briefcase } from "lucide-react";
+import { Star, StarHalf, StarOff } from "lucide-react";
 
 const ServiceCard = ({ icon: Icon, title, description, link, images }: { icon: React.ComponentType<any>; title: string; description: string; link?: string, images?: String }) => {
   // Determine the star fill logic based on the title
+  let filledStars = 0;
+  if (title === "Full Stack Developer") {
+    filledStars = 4.5;
+  } else if (title === "DSA Expertise & Competitive Programming") {
+    filledStars = 4;
+  } else if (title === "Internship at Sublimity Software Pvt Ltd") {
+    filledStars = 5;
+  }
+
   const getStarStyles = (index: number) => {
-    let filledStars = 0;
-
-    if (title === "Full Stack Developer") {
-      filledStars = 4;
-    } else if (title === "DSA Expertise & Competitive Programming") {
-      filledStars = 4.5;
-    } else if (title === "Internship at Sublimity Software Pvt Ltd") {
-      filledStars = 5;
-    }
-
-    if (index + 1 <= filledStars) {
-      // Fully filled star
-      return { color: "gold", fontSize: "30px" };
+    if (index + 1 <= Math.floor(filledStars)) {
+      // Fully filled star (gold)
+      return { color:'gold',fill: "gold" };
     } else if (index + 1 === Math.ceil(filledStars) && filledStars % 1 !== 0) {
-      // Half-filled star
+      // Half-filled star (gold for half, gray for the rest)
       return {
-        fontSize: "30px",
+        color:'gold',
+        fill: "gold",
         background: "linear-gradient(to right, gold 50%, gray 50%)",
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
       };
     } else {
-      // Empty star
-      return { color: "gray", fontSize: "30px" };
+      // Empty star (gray)
+      return { color:'gold',fill: "gray" };
     }
   };
 
@@ -44,10 +45,19 @@ const ServiceCard = ({ icon: Icon, title, description, link, images }: { icon: R
           />
         }
       </div>
-      <div>
-        {[...Array(5)].map((_, index) => (
-          <span key={index} style={getStarStyles(index)}>★</span>
-        ))}
+      <div style={{ display: 'flex' }}>
+        {[...Array(5)].map((_, index) => {
+          if (index + 1 <= Math.floor(filledStars)) {
+            // Display a full star
+            return <Star key={index} style={{ fontSize: "30px", ...getStarStyles(index) }} />;
+          } else if (index + 1 === Math.ceil(filledStars) && filledStars % 1 !== 0) {
+            // Display a half star
+            return <StarHalf key={index} style={{ fontSize: "30px", ...getStarStyles(index) }} />;
+          } else {
+            // Display an empty star
+            return <Star key={index} style={{ fontSize: "30px", fill: "gray" }} />;
+          }
+        })}
       </div>
       <h3 className="service-title">{title}</h3>
       <p className="service-description">{description}</p>
