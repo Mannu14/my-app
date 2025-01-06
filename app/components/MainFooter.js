@@ -1,85 +1,101 @@
 "use client";
-import projects from '../data/projectsData';
-import { LinkPreviewDemo } from './LinkPreviewDemo';
-export default function MainFooter() {
-  const firstSixProjects = projects.slice(0, 6);
-  const remainingProjects = projects.slice(6, projects.length);
-  return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-section">
-          <h2>Projects</h2>
-          {firstSixProjects.map((project, index) => (
-            <div key={index}>
-              <LinkPreviewDemo url={project.url} Name={project.title} />
-            </div>
-          ))}
-        </div>
-        <div className="footer-section">
-          <h2>Projects</h2>
-          {remainingProjects.map((project, index) => (
-            <div key={index}>
-              <LinkPreviewDemo url={project.url} Name={project.title} />
-            </div>
-          ))}
-        </div>
-        <div className="footer-section">
-          <h2>Contact</h2>
-          <p>Email: contact@yourwebsite.com</p>
-          <p>Phone: +1 (234) 567-890</p>
-        </div>
-        <div className="footer-section">
-          <h2>Follow Us</h2>
-          <p>Facebook</p>
-          <p>Twitter</p>
-          <p>Instagram</p>
-        </div>
-      </div>
-      <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
-      </div>
+import React from "react";
+import { Box, Grid, Typography, TextField, Button, Link, Paper } from "@mui/material";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-      <style jsx>{`
-          .footer {
-            background-color: #0a0909;
-            color: #e0e0e0;
-            padding: 40px 0;
-            text-align: center;
-          }
-          .footer-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-          }
-          .footer-section {
-            flex: 1;
-            min-width: 200px;
-            margin: 10px 0;
-          }
-          .footer-section h2 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: #fff;
-          }
-          .footer-section p {
-            margin: 5px 0;
-            color: #e0e0e0;
-            cursor: pointer;
-            transition: color 0.3s;
-            font-size: 12px;
-          }
-          .footer-section p:hover {
-            color: #50b3a2;
-          }
-          .footer-bottom {
-            border-top: 1px solid #333;
-            padding-top: 20px;
-            margin-top: 20px;
-          }
-        `}</style>
-    </footer>
+const theme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
+
+export default function MainFooter() {
+  return (
+    <ThemeProvider theme={theme}>
+      <Paper
+        sx={{ p: 2, margin: "auto", flexGrow: 1, backgroundColor: "background.default" }}
+        elevation={0}
+      >
+        <Box sx={{ mb: 4, backgroundColor: "background.paper", p: 4 }}>
+          <Typography
+            variant="h4"
+            component="h3"
+            sx={{ fontWeight: "bold", textAlign: "center", mb: 2, color: "text.primary" }}
+          >
+            Welcome to My Development Journey!
+          </Typography>
+          <Typography variant="h5" sx={{ textAlign: "center", color: "text.secondary" }}>
+            I'm a MERN Stack Developer and Python DSA Enthusiast. Join me as I build scalable solutions and solve complex problems.
+          </Typography>
+        </Box>
+        <Box sx={{ width: "100%", my: 4, py: 4, bgcolor: "background.paper" }}>
+          <Grid container spacing={2} justifyContent="space-around">
+            <Grid item xs={12} sm={4}>
+              <Typography variant="h6" sx={{ color: "text.primary" }}>About Me</Typography>
+              <Typography variant="body2" sx={{ mt: 1, color: "text.secondary" }}>
+                Hi, I'm a passionate developer proficient in MERN stack and DSA using Python. 
+                I specialize in creating dynamic and scalable web applications while solving complex algorithmic problems.
+              </Typography>
+              <Box sx={{ mt: 1, display: "flex", gap: 1 }}>
+                <FaFacebook style={{ color: "#3b5998" }} />
+                <FaTwitter style={{ color: "#1da1f2" }} />
+                <FaInstagram style={{ color: "#e4405f" }} />
+                <FaLinkedin style={{ color: "#0e76a8" }} />
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Typography variant="h6" sx={{ color: "text.primary" }}>Contact Information</Typography>
+              <Typography variant="body2" sx={{ mt: 1, color: "text.secondary" }}>
+                +9101-2345-6789
+              </Typography>
+              <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                info@Contact-Me-via-SendMessage
+              </Typography>
+              <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                332712, Sikar, Rajasthan
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Typography variant="h6" sx={{ color: "text.primary" }}>Contact Me</Typography>
+              <TextField
+                id="email"
+                label="Enter your email address"
+                variant="outlined"
+                size="small"
+                sx={{ mt: 1 }}
+                fullWidth
+                InputLabelProps={{
+                  style: { color: "text.primary" },
+                }}
+                InputProps={{
+                  style: { color: "text.primary" },
+                }}
+              />
+              <Button variant="contained" sx={{ mt: 2 }} fullWidth>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://mkcoding.manishji.site/contactUs"
+                  style={{ color: "#3b5998", textDecoration: "none" }}
+                >
+                  Send Message
+                </Link>
+              </Button>
+            </Grid>
+          </Grid>
+        </Box>
+        <Typography variant="body2" sx={{ mt: 4, textAlign: "center", color: "text.secondary" }}>
+          © 2025 Manishji. All rights reserved.
+          <Link href="#" sx={{ color: "text.link" }}>
+            Privacy Policy
+          </Link>{" "}
+          |{" "}
+          <Link href="#" sx={{ color: "text.link" }}>
+            Terms of Service
+          </Link>
+        </Typography>
+      </Paper>
+    </ThemeProvider>
   );
 }
