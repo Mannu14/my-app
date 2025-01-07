@@ -138,7 +138,7 @@ export default function ProjectCard({
                     – {label}:
                   </span>
                   <br />
-                  <span style={{ display: 'flex', padding: '5px' }}>►
+                  <span style={{ display: 'flex', padding: '5px',color:'#c384ff' }}>►
                     {description && <span>{description}</span>}
                   </span>
                 </span>
