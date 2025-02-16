@@ -3,6 +3,8 @@ import React from "react";
 import { Code2, BookOpen, Briefcase } from "lucide-react";
 import { Star, StarHalf } from "lucide-react";
 import { ComponentType } from 'react';
+import { useState, useEffect } from 'react';
+import Loading from '../components/Loading';
 
 type ServiceCardProps = {
   icon: ComponentType<React.SVGProps<SVGSVGElement>>; // Specifies that the icon is a React component that accepts SVG props
@@ -124,6 +126,7 @@ const ServiceCard = ({ icon: Icon, title, description, link, images }: ServiceCa
 };
 
 const Services = () => {
+
   const services = [
     {
       icon: Code2,
@@ -145,6 +148,22 @@ const Services = () => {
       images: "SublimitySoftwaresPrivateLimited.jpg",
     },
   ];
+  const [loading, setLoading] = useState(true);
+  useEffect(()=>{
+    if(services){
+        setLoading(false);
+      }
+  });
+  if(loading){
+    return <div style={{
+      width: '100%',
+      height: '300px',
+      textAlign: 'center',
+      alignItems: 'center',
+      display: 'flex',
+      justifyContent: 'center'
+    }}><Loading/></div>
+  }
 
   return (
     <section id="services" className="services-section">
@@ -162,7 +181,7 @@ const Services = () => {
             <div style={{ marginLeft: '15px', textAlign: 'left' }}>
               <h3 className="college-name">Indian Institute of Information Technology Ranchi</h3>
               <p className="branch-name">Branch: Electronics and Communication Engineering(ECE)</p>
-              <p className="cgpa">CGPA: 7.91/10</p>
+              {/* <p className="cgpa">CGPA: 7.91/10</p> */}
             </div>
           </div>
           <p className="college-intro">
