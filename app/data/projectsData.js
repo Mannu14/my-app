@@ -25,7 +25,7 @@ const projects = [
             "Interactive User Feedback System: Enabled likes, comments, and ratings with WebSocket-based real-time updates, allowing users to interact with restaurant menus and items. This feature allows restaurant owners to gather feedback directly from users.",
             "Dynamic Cart Updates with Redux: Utilized Redux to manage cart state efficiently, allowing for real-time cart updates. Implemented dynamic quantity changes and updates, ensuring that users see accurate cart contents even as items are added, removed, or quantities adjusted.",
         ],
-        url: "https://mkcodiing.manishji.site",
+        url: "https://food-delivery-gsln.onrender.com",
         Github: 'https://github.com/Mannu14/Food-Delivery',
         Youtube: '',
         websiteImage: 'manishji-FoodOrderingWebsite.png',
@@ -92,7 +92,7 @@ const projects = [
             "Admin Privileges and Member Management: Granted group admins exclusive privileges, including the ability to add or remove members and manage access rights. This admin functionality allows for better control over group interactions, ensuring secure and organized group management.",
             "Additional JavaScript Projects: In addition to this chat application, various JavaScript-based projects have been implemented, showcasing expertise in full-stack development, real-time interactions, and database management."
         ],
-        url: "https://mkcoding.manishji.site/login?Mkcoding=dashboardchat",
+        url: "https://mkcoding.onrender.com/login?Mkcoding=dashboardchat",
         Github: 'https://github.com/Mannu14/MkCoding',
         Youtube: '',
         websiteImage: 'manishji-MessengerChatProject.png',
