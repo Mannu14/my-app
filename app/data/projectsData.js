@@ -394,7 +394,7 @@ const projects = [
             "Video Player: A simple video playback application supporting various formats.",
             "Calculator: A basic calculator application for performing arithmetic operations.",
         ],
-        url: "https://mkcoding.manishji.site/projects",
+        url: "https://mkcoding.onrender.com/projects",
         Github: 'https://github.com/Mannu14/MkCoding',
         Youtube: '',
         websiteImage: 'manishji-JavaScriptProjectsPortfolio.png',
