@@ -2,6 +2,7 @@ const projects = [
     {
         title: "Food Ordering Website | Full-Stack Development",
         Name: "Food Ordering Website",
+        featured: true,
         duration: "Jul 2024 - Aug 2024",
         description: "Developed a comprehensive food ordering platform, creating a seamless experience for users, restaurant managers, and delivery personnel. Key features and technical implementations include:",
         technologies: "React.js, Redux, CSS, Node.js, Express.js, MongoDB",
@@ -44,6 +45,7 @@ const projects = [
     {
         Name: "Dynamic Quiz Platform",
         title: "Dynamic Quiz Platform",
+        featured: true,
         duration: "Jun 2024 - Mar 2024",
         description: "Developed a dynamic quiz website where registered users can engage in daily quizzes, with real-time scoring and performance tracking. This project showcases key functionalities tailored for an interactive and responsive user experience.",
         technologies: "React, Node.js, Express.js, MongoDB",
@@ -108,6 +110,7 @@ const projects = [
     {
         Name: "News Aggregator and Filter",
         title: "News Aggregator and Filter",
+        featured: true,
         duration: "Apr 2024 - May 2024",
         description: "Developed a dynamic news aggregator platform that retrieves and displays news articles from a third-party API, providing an efficient, user-friendly experience with advanced filtering and seamless data loading.",
         technologies: "ReactJS, Node.js, MongoDB",
@@ -140,6 +143,7 @@ const projects = [
     {
         Name: "Online Code Compiler",
         title: "Online Code Compiler",
+        featured: true,
         duration: "May 2024 - Jun 2024",
         description: "Engineered a robust online code compiler that allows users to write, run, and test code against automated test cases, providing a streamlined development experience similar to popular coding platforms.",
         technologies: "ReactJs, Node.js, MongoDB",
@@ -229,6 +233,7 @@ const projects = [
     {
         Name: "Admin Dashboard Platform",
         title: "Admin Dashboard Platform",
+        featured: true,
         duration: "Jun 2024 - Oct 2024",
         description: "Developed a comprehensive and interactive admin dashboard designed to streamline data management and provide real-time insights through visualizations.",
         technologies: "React.js, CSS, Chart.js",
